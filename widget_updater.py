@@ -53,6 +53,8 @@ def prepare_dashboards_to_update(dashboard_details, old_metric, new_metric):
                         updated_requests.append(request)
                         if dashboard['id'] not in dashboard_ids_to_update:
                             dashboard_ids_to_update.append(dashboard['id'])
+                    else:
+                        updated_requests.append(request)
                 # Reassign the updated list of widgets to its previous position.
                 dashboard['widgets'][widget_index]['definition']['requests'] = updated_requests
             widget_index += 1
