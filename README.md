@@ -8,11 +8,21 @@ Create a Python environment and install dependencies.
 
 ```bash
 # Create a Python virtual environment
-python3 -m venv venv
+python -m venv venv
 # Activate the environment
 . venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
+```
+
+### Required
+
+Make sure the following environment variables are set:
+
+```bash
+export DD_API_KEY="<DD_API_KEY>"
+export DD_APP_KEY="<DD_APP_KEY>"
+export DD_SITE="<DD_SITE>"
 ```
 
 ## Usage
