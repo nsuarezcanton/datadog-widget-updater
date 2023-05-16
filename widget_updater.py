@@ -1,17 +1,6 @@
-from datadog import initialize, api
 from datadog_api_client import ApiClient, Configuration
 from datadog_api_client.v1.api.dashboards_api import DashboardsApi
-from os import environ
 from sys import argv
-
-# This is not essential; see https://github.com/DataDog/datadogpy#environment-variables
-OPTIONS = {
-    "api_key": environ["DD_API_KEY"],
-    "app_key": environ["DD_APP_KEY"],
-    "api_host": environ["DD_SITE"],
-}
-# Initialize the Datadog API client.
-initialize(**OPTIONS)
 
 # These are the types of widgets that would be updated.
 # See https://docs.datadoghq.com/dashboards/widgets
